@@ -1,0 +1,87 @@
+#include <stdio.h>
+#define _CRT_SCURE_NO_WARNINGS
+
+int sum(int x, int y, int z)
+{ 
+  return x + y + z;
+}
+int main(void)
+{
+    int x, y, z, P;
+    printf("정수 3개를 입력하시오 : ");
+    scanf("%d %d %d",  &x, &y, &z);
+    P = sum(x,y,z);
+    printf("x,y,z의 값은 %d입니다.", P);
+    return 0;
+}
+//---------------------------------------------
+int get_integer(void)
+{
+    int value;
+    printf("정수를 입력하시오 : ");
+    scanf("%d", &value);
+    //printf("value의 값은 %d입니다. ", value);
+    return value;
+}
+int add(int x, int y)
+{
+    return x + y;
+}
+int main(void)
+{   
+  int sum;
+  int x = get_integer();
+  int y = get_integer();
+  sum = add(x,y);
+  printf("두 수의 합은 : %d입니다.\n", sum);
+  return 0;
+}
+//--------------------------------------------------------
+int factorial(int n)
+{
+    int result = 1;
+    for(int i = 1; i<=n; i++)
+      result *= i;
+      return result;
+}
+int main(void)
+{
+    int n;
+    printf("알고 싶은 팩토리얼의 값은?");
+    scanf("%d", &n);
+    printf("%d!의 값은 %d입니다.\n", n, factorial(n));
+    return 0;
+}
+//--------------------------------------------------------
+int fact(int n)
+{
+    if (n <= 1)
+        return 1;
+    else
+        return n * fact(n - 1);
+}
+int main() 
+{ 
+    int n, i;
+    int result=1; 
+    printf("정수 입력 : "); 
+    scanf("%d", &n); 
+
+    result = fact(n);
+    printf("%d! = %d\n", n, result); 
+    return 0; 
+}
+//-----------------------------------------------------------
+void print_stars()
+{
+    for(int i = 0; i<30; i++){
+        prnitf("*");
+    }
+}
+int main(void)
+{
+    print_stars();
+    printf("\n Hello World! \n");
+    print_stars();
+    return 0;
+}
